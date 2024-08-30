@@ -1,15 +1,22 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: linear-gradient(135deg, rgb(75,63,197) 0%,rgb(79,145,214) 100%);
+    background-image: linear-gradient(135deg, rgb(75, 63, 197) 0%, rgb(79, 145, 214) 100%);
     margin: 0;
     padding: 20px;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
+    align-items: center;
+    /* Adicionado para centralizar verticalmente */
+    justify-content: center;
+    /* Adicionado para centralizar horizontalmente */
+    overflow-y: hidden;
 
 }
 
 .container {
-    min-width: 900px;
+    width: 70%;
+    max-width: 100%;
+    /* Garantir que não ultrapasse o tamanho da tela */
     margin: auto;
     background: white;
     padding: 20px;
@@ -17,7 +24,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
+h1,
+h2 {
     text-align: center;
     color: #333;
     text-transform: uppercase;
@@ -38,16 +46,22 @@ label {
     color: #555;
 }
 
-input[type="text"], textarea {
+input[type="text"],
+textarea {
     width: 100%;
+    height: auto;
+    /* Permite que o textarea expanda verticalmente conforme necessário */
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    /* Garante que o padding e a borda sejam incluídos na largura total */
+    resize: vertical;
+    /* Permite que o usuário redimensione verticalmente o textarea */
 }
 
-.btn {    
+.btn {
     width: 100%;
     display: flex;
     align-items: center;
@@ -61,7 +75,7 @@ button {
     border: none;
     color: white;
     font-size: 16px;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
     transition: ease .4s;
 }
