@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Página Shortcuts</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>ATALHOS ATENDIMENTO ON-LINE</h1>
+        <div class="form-group">
+            <label for="titulo">Assunto:</label>
+            <input type="text" id="titulo" placeholder="Digite o título">
+        </div>
+        <div class="form-group">
+            <label for="conteudo">Área de Texto:</label>
+            <textarea id="conteudo" placeholder="Digite o texto com formatação" rows="8"></textarea>
+        </div>
+        <div class="btn"><button onclick="cadastrarAssunto()">Cadastrar</button></div>
+
+        <h2>Filtro de Assuntos</h2>
+        <input type="text" id="filtro" placeholder="Digite para buscar..." onkeyup="filtrarAssuntos()">
+
+        <ul id="lista-assuntos"></ul>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
