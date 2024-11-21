@@ -82,7 +82,7 @@ input[type="password"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(74, 63, 197, 0.603);
+    background-color: rgba(74, 63, 197, 0.803);
     border-radius: 5px;
     cursor: pointer;
     margin-top: 15px;
