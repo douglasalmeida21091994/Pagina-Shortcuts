@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleIndex.css">
+    <link rel="stylesheet" href="styleCadastro.css">
     <title>Página Shortcuts</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,17 +18,20 @@
         </div>
         <div class="form-group">
             <label for="conteudo">Área de Texto:</label>
-            <textarea id="conteudo" placeholder="Digite o texto aqui..." rows="8"></textarea>
+            <textarea id="conteudo" placeholder="Digite o texto aqui..." rows="5"></textarea>
         </div>
-        <div class="btn"><button onclick="cadastrarAssunto()">Cadastrar</button></div>
 
-        <h2>Filtro de Assuntos</h2>
+        <div class="btn">
+            <button onclick="cadastrarAssunto()">Cadastrar</button>
+        </div>
+
+        <h1>ATALHOS CADASTRADOS</h1>
         <input type="text" id="filtro" placeholder="Digite para buscar..." onkeyup="filtrarAssuntos()">
 
         <ul id="lista-assuntos"></ul>
     </div>
 
-    <script src="script.js"></script>
+    <script src="scriptCadastro.js"></script>
     
 </body>
 </html>
