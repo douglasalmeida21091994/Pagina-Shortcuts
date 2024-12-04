@@ -99,7 +99,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;  /* Espaço inferior */
+    margin-bottom: 15px;  /* Espaço inferior */
 }
 
 button {
@@ -122,6 +122,10 @@ button:hover {
 
 button:active {
     background-color: #398439;
+}
+
+hr {
+    color: #cccccc41;
 }
 
 ul {
@@ -197,19 +201,39 @@ li:last-child {
     justify-content: center;    
 }
 
-/* Estilo do filtro */
+/* Estilo do contêiner */
+.input-container {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    max-width: 500px; 
+}
+
+/* Estilo do input */
 #filtro {
-    padding: 8px 15px;
-    width: 100%;
+    flex: 1;
+    padding: 10px 40px 10px 15px;
     font-size: 1em;
-    margin: 15px 0;
-    border-radius: 4px;
     border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    margin: 15px 0;
+}
+
+/* Estilo do ícone */
+.input-container i {
+    position: absolute;
+    right: 15px; /* Distância do ícone para o lado direito */
+    color: #aaa;
+    font-size: 1.2em; /* Tamanho do ícone */
+    pointer-events: none; /* Torna o ícone não clicável */
 }
 
 /* Estilo do botão de cadastrar */
 .btn button {
-    padding: 10px 20px;
+    padding: 10px 15px;
     color: white;
     border: none;
     border-radius: 4px;

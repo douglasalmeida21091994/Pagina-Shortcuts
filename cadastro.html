@@ -14,7 +14,7 @@
         
         <header class="title">
             <img src="img/nova-logo-branca 1.png" alt="Logo Smie Saúde" class="title-image">
-            <h2>GERENCIALMENTO DE CADASTROS</h2>
+            <h2>GERENCIAMENTO DE CADASTROS</h2>
         </header>
 
 
@@ -31,8 +31,16 @@
             <div class="btn">
                 <button onclick="cadastrarAssunto()">Cadastrar</button>
             </div>
-            <input type="text" id="filtro" placeholder="Digite para buscar..." onkeyup="filtrarAssuntos()">
+
+            <hr>
+
+            <div class="input-container">
+                <input type="text" id="filtro" placeholder="Digite para buscar..." onkeyup="filtrarAssuntos()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>            
+
             <ul id="lista-assuntos"></ul>
+            
         </div>
         <script src="scriptCadastro.js"></script>
     </div>
