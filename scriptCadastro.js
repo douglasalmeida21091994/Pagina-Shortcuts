@@ -26,12 +26,31 @@ function exibirAtalhos(atalhos) {
             <div class="atalho-titulo">${at.titulo}</div>
             <div class="atalho-conteudo">${at.conteudo}</div>
             <div class="atalho-botoes">
-                <button onclick="editarAtalho(${at.id})">Editar</button>
-                <button id="btn-excluir" onclick="excluirAtalho(${at.id})">Excluir</button>
+                <button id="btn-editar" onclick="editarAtalho(${at.id})">Editar <i class="fa-regular fa-pen-to-square"></i></button>
+
+                <button id="btn-excluir" onclick="excluirAtalho(${at.id})">Excluir <i class="fa-regular fa-trash-can"></i></button>
+
+                <button id="btn-copiar" onclick="copiarConteudo(${at.id})">Copiar <i class="fa-regular fa-copy"></i></button>
             </div>
         `;
         listaAssuntos.appendChild(item);
     });
+}
+
+// Função para copiar o conteúdo do atalho
+function copiarConteudo(id) {
+    let atalhos = JSON.parse(localStorage.getItem('atalhos')) || [];
+    let atalho = atalhos.find(at => at.id === id);
+
+    if (atalho) {
+        navigator.clipboard.writeText(atalho.conteudo)
+            .then(() => {
+                alert('Conteúdo copiado para a área de transferência!');
+            })
+            .catch(err => {
+                alert('Falha ao copiar o conteúdo: ' + err);
+            });
+    }
 }
 
 // Função para cadastrar um novo atalho

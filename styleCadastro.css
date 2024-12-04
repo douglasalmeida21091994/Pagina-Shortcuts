@@ -99,7 +99,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 15px;  /* Espaço inferior */
+    margin-bottom: 15px;    
 }
 
 button {
@@ -112,8 +112,7 @@ button {
     border: none;
     cursor: pointer;
     transition: ease .4s;
-    width: auto;  /* Ajusta o tamanho conforme necessário */
-    margin: 5px;  /* Margem entre os botões */
+    width: 150px;   
 }
 
 button:hover {
@@ -122,6 +121,10 @@ button:hover {
 
 button:active {
     background-color: #398439;
+}
+
+.btn > button > i {
+    margin-left: 5px;
 }
 
 hr {
@@ -240,6 +243,53 @@ li:last-child {
     cursor: pointer;
 }
 
-#btn-excluir {
-    background-color: #f87171;
+#btn-excluir {    
+    border: 1px solid #f87171dc;
+    background-color: #fff;
+    color: #f87171dc;
 }
+
+#btn-excluir:hover {    
+    border: 1px solid #f87171dc;
+    background-color: #f87171dc;
+    color: #fff;
+}
+
+#btn-excluir > i {
+    margin-left: 5px;
+}
+
+#btn-editar {    
+    border: 1px solid rgba(74, 63, 197, 0.534);
+    background-color: #fff;
+    color: rgba(74, 63, 197, 0.834);
+}
+
+#btn-editar:hover {    
+    border: 1px solid rgba(74, 63, 197, 0.534);
+    background-color: rgba(74, 63, 197, 0.834);
+    color: #fff;
+}
+
+#btn-editar > i {
+    margin-left: 5px;
+}
+
+#btn-copiar {    
+    border: 1px solid rgba(73, 161, 99, 0.534);
+    background-color: #fff;
+    color: rgba(73, 161, 99, 0.834);
+}
+
+#btn-copiar:hover {    
+    border: 1px solid rgba(73, 161, 99, 0.534);
+    background-color: rgba(73, 161, 99, 0.834);
+    color: #fff;
+}
+
+#btn-copiar > i {
+    margin-left: 5px;
+}
+
+
+

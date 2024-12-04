@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleCadastro.css">
     <title>Página Shortcuts</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
 
     <div class="main">
-        
+
         <header class="title">
             <img src="img/nova-logo-branca 1.png" alt="Logo Smie Saúde" class="title-image">
             <h2>GERENCIAMENTO DE CADASTROS</h2>
@@ -20,16 +24,19 @@
 
         <div class="container">
             <h1>Preencha os dados abaixo</h1>
+
             <div class="form-group">
                 <label for="titulo">Assunto:</label>
                 <input type="text" id="titulo" placeholder="Digite o título">
             </div>
+
             <div class="form-group">
                 <label for="conteudo">Área de Texto:</label>
                 <textarea id="conteudo" placeholder="Digite o texto aqui..." rows="2"></textarea>
             </div>
+
             <div class="btn">
-                <button onclick="cadastrarAssunto()">Cadastrar</button>
+                <button onclick="cadastrarAssunto()">Cadastrar <i class="fa-solid fa-plus"></i></button>
             </div>
 
             <hr>
@@ -37,13 +44,14 @@
             <div class="input-container">
                 <input type="text" id="filtro" placeholder="Digite para buscar..." onkeyup="filtrarAssuntos()">
                 <i class="fa-solid fa-magnifying-glass"></i>
-            </div>            
+            </div>
 
             <ul id="lista-assuntos"></ul>
-            
+
         </div>
         <script src="scriptCadastro.js"></script>
     </div>
-    
+
 </body>
+
 </html>
