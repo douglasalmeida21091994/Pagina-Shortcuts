@@ -91,7 +91,7 @@ function editarAtalho(id) {
 
         // Alterar o botão de cadastrar para um botão de salvar as alterações
         const btnCadastrar = document.querySelector('.btn button');
-        btnCadastrar.textContent = 'Salvar Alterações';
+        btnCadastrar.textContent = 'Salvar <i class="fa-solid fa-check-double"></i>';
         btnCadastrar.setAttribute('onclick', `salvarAlteracoes(${id})`);
     }
 }
@@ -121,7 +121,7 @@ function salvarAlteracoes(id) {
     document.getElementById('titulo').value = '';
     document.getElementById('conteudo').value = '';
     const btnCadastrar = document.querySelector('.btn button');
-    btnCadastrar.textContent = 'Cadastrar';
+    btnCadastrar.textContent = 'Cadastrar <i class="fa-solid fa-plus"></i>';
     btnCadastrar.setAttribute('onclick', 'cadastrarAssunto()');
 }
 
@@ -134,11 +134,16 @@ function excluirAtalho(id) {
     exibirAtalhos(atalhos);
 }
 
-// Função para filtrar os atalhos pelo título
+// Função para filtrar os atalhos pelo título ou conteúdo
 function filtrarAssuntos() {
-    const filtro = document.getElementById('filtro').value.toLowerCase();
-    let atalhos = JSON.parse(localStorage.getItem('atalhos')) || [];
-    atalhos = atalhos.filter(at => at.titulo.toLowerCase().includes(filtro));
+    const filtro = document.getElementById('filtro').value.toLowerCase(); // Texto digitado no filtro
+    let atalhos = JSON.parse(localStorage.getItem('atalhos')) || []; // Carregar atalhos do localStorage
 
-    exibirAtalhos(atalhos);
+    // Filtrar atalhos verificando título ou conteúdo
+    atalhos = atalhos.filter(at => 
+        at.titulo.toLowerCase().includes(filtro) || 
+        at.conteudo.toLowerCase().includes(filtro)
+    );
+
+    exibirAtalhos(atalhos); // Atualizar a lista exibida
 }
