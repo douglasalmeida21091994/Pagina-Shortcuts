@@ -10,28 +10,32 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>ATALHOS ATENDIMENTO ON-LINE</h1>
-        <div class="form-group">
-            <label for="titulo">Assunto:</label>
-            <input type="text" id="titulo" placeholder="Digite o título">
-        </div>
-        <div class="form-group">
-            <label for="conteudo">Área de Texto:</label>
-            <textarea id="conteudo" placeholder="Digite o texto aqui..." rows="5"></textarea>
-        </div>
+    <div class="main">
+        
+        <header class="title">
+            <img src="img/nova-logo-branca 1.png" alt="Logo Smie Saúde" class="title-image">
+            <h2>GERENCIALMENTO DE CADASTROS</h2>
+        </header>
 
-        <div class="btn">
-            <button onclick="cadastrarAssunto()">Cadastrar</button>
+
+        <div class="container">
+            <h1>Preencha os dados abaixo</h1>
+            <div class="form-group">
+                <label for="titulo">Assunto:</label>
+                <input type="text" id="titulo" placeholder="Digite o título">
+            </div>
+            <div class="form-group">
+                <label for="conteudo">Área de Texto:</label>
+                <textarea id="conteudo" placeholder="Digite o texto aqui..." rows="2"></textarea>
+            </div>
+            <div class="btn">
+                <button onclick="cadastrarAssunto()">Cadastrar</button>
+            </div>
+            <input type="text" id="filtro" placeholder="Digite para buscar..." onkeyup="filtrarAssuntos()">
+            <ul id="lista-assuntos"></ul>
         </div>
-
-        <h1>ATALHOS CADASTRADOS</h1>
-        <input type="text" id="filtro" placeholder="Digite para buscar..." onkeyup="filtrarAssuntos()">
-
-        <ul id="lista-assuntos"></ul>
+        <script src="scriptCadastro.js"></script>
     </div>
-
-    <script src="scriptCadastro.js"></script>
     
 </body>
 </html>
